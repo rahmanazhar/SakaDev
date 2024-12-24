@@ -89,29 +89,5 @@ Using the [Model Context Protocol](https://github.com/modelcontextprotocol), Sak
 ### Contributing
 Check our [open issues](https://github.com/rahmanazhar/SakaDev/issues) or [feature request board](https://github.com/rahmanazhar/SakaDev/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop) to get started.
 
-### Local Setup
-<details>
-<summary>Setup Instructions</summary>
-
-1. Clone the repository (requires [git-lfs](https://git-lfs.com/)):
-   ```bash
-   git clone https://github.com/rahmanazhar/SakaDev.git
-   ```
-
-2. Open in VSCode:
-   ```bash
-   code sakadev
-   ```
-
-3. Install dependencies:
-   ```bash
-   npm run install:all
-   ```
-
-4. Launch with `F5` or `Run -> Start Debugging`
-
-Note: You may need the [esbuild problem matchers extension](https://marketplace.visualstudio.com/items?itemName=connor4312.esbuild-problem-matchers) for building.
-</details>
-
 ## License
 [Apache 2.0 © 2024 SakaDev by Hiroshi Aki.](./LICENSE)
