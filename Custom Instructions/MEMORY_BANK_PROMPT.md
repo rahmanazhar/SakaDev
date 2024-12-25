@@ -9,7 +9,7 @@ The Memory Bank system is designed around a core constraint: periodic complete m
 ## Required Directory Structure
 
 ```
-cline_docs/
+sakadev_docs/
 ├── productContext.md
 ├── activeContext.md
 ├── systemPatterns.md
