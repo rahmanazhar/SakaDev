@@ -90,4 +90,4 @@ Using the [Model Context Protocol](https://github.com/modelcontextprotocol), Sak
 Check our [open issues](https://github.com/rahmanazhar/SakaDev/issues) or [feature request board](https://github.com/rahmanazhar/SakaDev/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop) to get started.
 
 ## License
-[Apache 2.0 © 2024 SakaDev by Hiroshi Aki.](./LICENSE)
+[Apache 2.0 © 2024 SakaDev by Rahman Azhar.](./LICENSE)
