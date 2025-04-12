@@ -41,53 +41,90 @@ SakaDev is a powerful AI assistant that integrates directly with your developmen
 ## Features in Detail
 
 ### 🌐 API Provider Support
-- OpenRouter
-- Anthropic
-- OpenAI
-- Google Gemini
-- AWS Bedrock
-- Azure
-- GCP Vertex
-- Local models via LM Studio/Ollama
-- Token usage and cost tracking
+- OpenRouter with provider sorting (throughput, price, latency)
+- Anthropic with Claude 3.7 Sonnet
+- OpenAI with GPT-4.5 preview
+- Google Gemini with 2.5 Pro models
+- AWS Bedrock with Nova models
+- Azure OpenAI
+- GCP Vertex AI
+- DeepSeek with R1/V3 models
+- Mistral AI
+- xAI's Grok models
+- Local models via LM Studio/Ollama/LiteLLM
+- Comprehensive cost tracking and billing history
 
 ### 🖥️ Terminal Integration
-- Direct command execution
+- Direct command execution with auto-approval options
 - Real-time output monitoring
 - Background process support
 - Environment-aware operations
+- Quick access via 'Add to SakaDev' context menu
+- Drag and drop file/folder support
 
 ### 📝 File Management
 - Direct file creation and editing
-- Diff view for changes
-- Real-time error monitoring
-- Timeline tracking for modifications
+- Diff view for changes with reliable search/replace
+- Real-time error monitoring and auto-fixing
+- Automatic checkpoints for workspace state
+- Visual change indicators and restore options
+- .sakadevignore support for file access control
 
 ### 🌐 Browser Interaction
-- Launch and control browsers
+- Launch and control browsers (Chrome or Chromium)
 - Element interaction (clicks, typing, scrolling)
-- Screenshot capture
-- Console log monitoring
-- Visual bug fixing
-- Runtime issue debugging
+- Screenshot capture and console monitoring
+- Visual bug fixing and runtime debugging
+- Configurable viewport size and headless mode
+- Session-based browsing with Chrome remote debugging
 
 ### 🛠️ Extensible Tools
 Using the [Model Context Protocol](https://github.com/modelcontextprotocol), SakaDev can create custom tools for:
 - Jira ticket management
 - AWS infrastructure control
 - PagerDuty incident handling
-- And more based on your needs
+- And more via MCP Marketplace
+- Individual tool auto-approval options
+- Rich responses with image previews
 
 ### 📚 Context Management
 - **@url**: Import documentation from URLs
 - **@problems**: Add workspace issues for fixing
 - **@file**: Include specific file contents
 - **@folder**: Import entire folder contents
+- **@terminal**: Reference active terminal contents
+- **@git**: Access current changes or specific commits
+- Plan/Act mode toggle for task planning
+- Language preference settings
 
 ## Development
 
 ### Contributing
 Check our [open issues](https://github.com/rahmanazhar/SakaDev/issues) or [feature request board](https://github.com/rahmanazhar/SakaDev/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop) to get started.
+
+### Local Setup
+<details>
+<summary>Setup Instructions</summary>
+
+1. Clone the repository (requires [git-lfs](https://git-lfs.com/)):
+   ```bash
+   git clone https://github.com/rahmanazhar/SakaDev.git
+   ```
+
+2. Open in VSCode:
+   ```bash
+   code sakadev
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm run install:all
+   ```
+
+4. Launch with `F5` or `Run -> Start Debugging`
+
+Note: You may need the [esbuild problem matchers extension](https://marketplace.visualstudio.com/items?itemName=connor4312.esbuild-problem-matchers) for building.
+</details>
 
 ## License
 [Apache 2.0 © 2024 SakaDev by Rahman Azhar.](./LICENSE)
