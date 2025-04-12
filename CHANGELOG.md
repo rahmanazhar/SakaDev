@@ -2,8 +2,62 @@
 
 All notable changes to SakaDev will be documented in this file.
 
-## [3.0.9] 🐛 Bug Fixes
+## [3.1.0] 🐛 Major Improvements
+- Redesign checkpoint UI to declutter chat view by using a subtle indicator line that expands to a popover on hover, with a new date indicator for when it was created
+- Add support for xAI's provider's Grok 3 models
+- Add more robust error tracking for users opted in to telemetry (thank you for helping us make SakaDev better!)
+- Add CMD+' keyboard shortcut to add selected text to SakaDev
+- SakaDev now auto focuses the text field when using 'Add to SakaDev' shortcut
+- Add new 'Create New Task' tool to let SakaDev start a new task autonomously!
+- Fix Mermaid diagram issues
+- Fix Gemini provider cost calculation to take new tiered pricing structure into account
+- Add setting to let browser tool use local Chrome via remote debugging, enabling session-based browsing. Replaces sessionless Chromium, unlocking debugging and productivity workflows tied to your real browser state.
+- Add new auto-approve option to approve _ALL_ commands (use at your own risk!)
+- Add modal in the chat area to more easily enable or disable MCP servers
+- Add drag and drop of file/folders into sakadev chat (Thanks eljapi!)
+- Add prompt caching for LiteLLM + Claude (Thanks sammcj!)
+- Add Improved context management
+- Fix MCP auto approve toggle issues being out of sync with settings
+- Add recommended models for SakaDev provider
+- Add ability to detect when user edits files manually so SakaDev knows to re-read, leading to reduced diff edit errors
+- Add improvements to file mention searching for faster searching
+- Add scoring logic to file mentions to sort and exlcude results based on relevance
+- Add Support for Bytedance Doubao (Thanks Tunixer!)
+- Fix to prevent duplicate BOM (Thanks bamps53!)
+- Add Gemini 2.5 Pro Preview 03-25 to Google Provider
+- Add Enable extended thinking for LiteLLM provider (Thanks @jorgegarciarey!)
+- Add a tab for configuring local MCP Servers
+- Fix issue with DeepSeek API provider token counting + context management
+- Fix issues with checkpoints hanging under certain conditions
+- Add UI for adding remote servers
+- Add Mentions Feature Guide and update related documentation
+- Fix bug where menu would open in sidebar and open tab
+- Fix issue with SakaDev accounts not showing user info in popout tabs
+- Fix bug where menu buttons wouldn't open view in sidebar
+- Add support for remote MCP Servers using SSE
+- Add gemini-2.5-pro-exp-03-25 to Vertex AI (thanks @arri-cc!)
+- Add access to history, mcp, and new task buttons in popout view
+- Add task feedback telemetry (thumbs up/down on task completion)
+- Add toggle disabled for remote servers
+- Move the MCP Restart and Delete buttons and add an auto-approve all toggle
+- Update Requestly UX for model selection (thanks @arafatkatze!)
+- Add escape for html content for gemini when running commands
+- Improve search and replace edit failure behaviors
+- Add Sambanova Deepseek-V3-0324
+- Add cost calculation support for LiteLLM provider
+- Fix bug where SakaDev would use plan_mode_response bug without response parameter
+- Add support for SambaNova QwQ-32B model
+- Add OpenAI "dynamic" model chatgpt-4o-latest
+- Add Amazon Nova models to AWS Bedrock
+- Improve file handling for NextJS folder naming (fixes issues with parentheses in folder names)
+- Add Gemini 2.5 Pro to Google AI Studio available models
+- Handle "input too large" errors for Anthropic
+- Fix "See more" not showing up for tasks after task un-fold
+- Fix gpt-4.5-preview's supportsPromptCache value to true
+
+## [3.0.10] 🐛 Bug Fixes
 - Fixed Context Menu UI issues
+- Fix TerminalManager error handling
 
 ## [3.0.4] 🐛 Bug Fixes
 - Fixed Gemini models adding code block artifacts to text content
