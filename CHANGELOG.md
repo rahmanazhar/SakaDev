@@ -2,6 +2,86 @@
 
 All notable changes to SakaDev will be documented in this file.
 
+## [4.0.0] 🎉 Major Release
+
+### Major Features
+-   Added support for Claude 4 models (Sonnet 4 and Opus 4) across Anthropic, AWS Bedrock, and Vertex AI providers
+    - Fixed diff edit errors and invalid edits after several conversation turns
+    - Improved thinking budget handling
+    - Added prompt caching with increased max tokens (8192 for Opus 4)
+-   Introduced comprehensive workflow system
+    - Added global workflows for cross-workspace sharing
+    - Added Task Timeline visualization
+    - Added slash command integration
+-   Enhanced UI/UX
+    - Added SakaDev rules popover for easy rule management
+    - Added slash command menu for quick actions
+    - Added message editing with workspace state restoration
+    - Updated settings page with tabbed navigation
+    - Added keyboard shortcut (Cmd+') for quick SakaDev focus
+    - Added lightbulb actions for selected text
+
+### New Integrations
+-   Added Nebius AI Studio provider
+-   Added Gemini 2.5 Flash Preview with 1M token context window
+-   Added Fireworks API Provider
+-   Added support for custom model ID in AWS Bedrock
+
+### Performance & Stability
+-   Improved memory management and fixed leaks during long sessions
+-   Fixed freezing issues during large text streaming
+-   Fixed grey screen webview crashes
+-   Enhanced browser session handling
+-   Improved terminal command timing
+-   Added support for Streameable HTTP Transport for MCPs
+
+### Developer Improvements
+-   Added FeatureFlagProvider service
+-   Enhanced telemetry systems
+-   Improved cache tracking for Gemini & Vertex providers
+-   Updated documentation to Mintlify format
+-   Added auto-approve configuration improvements
+
+## [3.13.0]
+
+-   Add SakaDev rules popover under the chat field, allowing you to easily add, enable & disable workspace level or global rule files
+-   Add new slash command menu letting you type “/“ to do quick actions like creating new tasks
+-   Add ability to edit past messages, with options to restore your workspace back to that point
+-   Allow sending a message when selecting an option provided by the question or plan tool
+-   Add command to jump to SakaDev's chat input
+-   Add support for OpenAI o3 & 4o-mini
+-   Add baseURL option for Google Gemini provider
+-   Add support for Azure's DeepSeek model.
+-   Add ability for models that support it to receive image responses from MCP servers
+-   Improve search and replace diff editing by making it more flexible with models that fail to follow structured output instructions.
+-   Add detection of Ctrl+C termination in terminal, improving output reading issues
+-   Fix issue where some commands with large output would cause UI to freeze
+-   Fix token usage tracking issues with vertex provider
+-   Fix issue with xAI reasoning content not being parsed
+-   Add copy button to MermaidBlock component
+-   Add the ability to fetch from global sakadev rules files
+-   Add icon to indicate when a file outside of the users workspace is edited
+-   Add gpt-4.1
+
+## [3.2.1] 🚀 Major Release
+
+-   Use visual checkpoint indicator to make it clear when checkpoints are created
+-   Code quality improvements, refactoring contributions, and webview performance improvements!
+-   Use improved context manager
+
+## [3.2.0] 🚀 Fix Updates
+
+- Implemented model favoriting for SakaDev & OpenRouter providers
+- Added automatic approval options for external workspace edits/reads
+- Enhanced animation performance for large file diff editing
+- Introduced edit counter indicator for SakaDev file modifications
+- Integrated streaming support and reasoning control options for xAI's Grok 3 Mini
+- Added quick settings access button to MCP popover for server configuration
+- Resolved issue with unparsed browser tool results appearing in chat view
+- Fixed premature hiding of new checkpoints popover
+- Eliminated checkpoint duplication bug
+- Enhanced Ollama provider reliability with improved retry logic, timeout management, and error handling
+
 ## [3.1.0] 🐛 Major Improvements
 - Redesign checkpoint UI to declutter chat view by using a subtle indicator line that expands to a popover on hover, with a new date indicator for when it was created
 - Add support for xAI's provider's Grok 3 models
@@ -14,18 +94,18 @@ All notable changes to SakaDev will be documented in this file.
 - Add setting to let browser tool use local Chrome via remote debugging, enabling session-based browsing. Replaces sessionless Chromium, unlocking debugging and productivity workflows tied to your real browser state.
 - Add new auto-approve option to approve _ALL_ commands (use at your own risk!)
 - Add modal in the chat area to more easily enable or disable MCP servers
-- Add drag and drop of file/folders into sakadev chat (Thanks eljapi!)
-- Add prompt caching for LiteLLM + Claude (Thanks sammcj!)
+- Add drag and drop of file/folders into sakadev
+- Add prompt caching for LiteLLM + Claude
 - Add Improved context management
 - Fix MCP auto approve toggle issues being out of sync with settings
 - Add recommended models for SakaDev provider
 - Add ability to detect when user edits files manually so SakaDev knows to re-read, leading to reduced diff edit errors
 - Add improvements to file mention searching for faster searching
 - Add scoring logic to file mentions to sort and exlcude results based on relevance
-- Add Support for Bytedance Doubao (Thanks Tunixer!)
-- Fix to prevent duplicate BOM (Thanks bamps53!)
+- Add Support for Bytedance Doubao
+- Fix to prevent duplicate BOM
 - Add Gemini 2.5 Pro Preview 03-25 to Google Provider
-- Add Enable extended thinking for LiteLLM provider (Thanks @jorgegarciarey!)
+- Add Enable extended thinking for LiteLLM provider
 - Add a tab for configuring local MCP Servers
 - Fix issue with DeepSeek API provider token counting + context management
 - Fix issues with checkpoints hanging under certain conditions
@@ -35,12 +115,12 @@ All notable changes to SakaDev will be documented in this file.
 - Fix issue with SakaDev accounts not showing user info in popout tabs
 - Fix bug where menu buttons wouldn't open view in sidebar
 - Add support for remote MCP Servers using SSE
-- Add gemini-2.5-pro-exp-03-25 to Vertex AI (thanks @arri-cc!)
+- Add gemini-2.5-pro-exp-03-25 to Vertex AI
 - Add access to history, mcp, and new task buttons in popout view
 - Add task feedback telemetry (thumbs up/down on task completion)
 - Add toggle disabled for remote servers
 - Move the MCP Restart and Delete buttons and add an auto-approve all toggle
-- Update Requestly UX for model selection (thanks @arafatkatze!)
+- Update Requestly UX for model selection
 - Add escape for html content for gemini when running commands
 - Improve search and replace edit failure behaviors
 - Add Sambanova Deepseek-V3-0324
